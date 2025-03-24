@@ -13,4 +13,6 @@ public class collision : MonoBehaviour
     {
         Debug.Log("start"); 
     }
+     
+    Debug.Log("")
 }
