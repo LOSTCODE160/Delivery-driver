@@ -9,10 +9,11 @@ public class collision : MonoBehaviour
         Debug.Log("shittt");
     }
 
+
      void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("start"); 
     }
      
-    Debug.Log("")
+    
 }
