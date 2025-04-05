@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camera : MonoBehaviour
+public class FollowCamera : MonoBehaviour
 {
 
-    [SerializeField] GameObject thingToFollow;
-   
-    void Update()
-    {
-        
 
+    [SerializeField] GameObject thingToFollow;
+    
+    void Update()
+    {   
+        transform.position= thingToFollow.transform.position;
+        
     }
 }
