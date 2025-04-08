@@ -10,10 +10,13 @@ public class Delivery : MonoBehaviour
     }
 
 
-     void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("start"); 
+        if (other.tag == " Package")
+        { Debug.Log(" package is picked"); }
+
+        if (other.tag == "Loc")
+        { Debug.Log("delivered"); }
     }
-     
     
 }
