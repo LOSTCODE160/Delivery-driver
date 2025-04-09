@@ -10,6 +10,9 @@ A fun 2D top-down driving game built with Unity and C#. The goal is simple: pick
 
 ![image](https://github.com/user-attachments/assets/23f42b00-e8d0-4d3a-80ad-f6904e606c6d)
 
+![image](https://github.com/user-attachments/assets/6f96450e-9728-437a-bb6d-c37b3d7628f0)
+
+
 
 
 
