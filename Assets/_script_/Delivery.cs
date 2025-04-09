@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
+    bool hasPackage;
+    [SerializeField] float Destroy_Time = 1.0f;
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("shittt");
@@ -12,11 +15,13 @@ public class Delivery : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == " Package")
-        { Debug.Log(" package is picked"); }
+        if (other.tag == "Package2" && !hasPackage)
+        { Debug.Log(" package is picked"); hasPackage = true; Destroy(other.gameObject, Destroy_Time); }
 
-        if (other.tag == "Loc")
-        { Debug.Log("delivered"); }
+        if (other.tag == "Loc" && hasPackage)   
+        { Debug.Log("delivered");
+            hasPackage = false;
+        }
     }
     
 }
