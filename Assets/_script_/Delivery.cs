@@ -6,6 +6,9 @@ using UnityEngine;
 public class Delivery : MonoBehaviour
 {
     bool hasPackage;
+    [SerializeField] Color32 hasColorPackage=new Color32(1,1,1,1);
+    [SerializeField] Color32 noColorPackage = new Color32(1, 1, 1, 1);
+
     [SerializeField] float Destroy_Time = 1.0f;
     void OnCollisionEnter2D(Collision2D collision)
     {
