@@ -8,8 +8,8 @@ public class Delivery : MonoBehaviour
     bool hasPackage;
     [SerializeField] Color32 hasColorPackage=new Color32(1,1,1,1);
     [SerializeField] Color32 noColorPackage = new Color32(1, 1, 1, 1);
-    [SerializeField] float Destroy_Time = 0.5f;
-    SpriteRenderer spriteRenderer;
+    [SerializeField] float Destroy_Time = 0.3f;
+    SpriteRenderer spriteRenderer; 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -25,8 +25,9 @@ public class Delivery : MonoBehaviour
         if (other.tag == "Package2" && !hasPackage)
         { Debug.Log(" package is picked"); 
             hasPackage = true;
-            Destroy(other.gameObject, Destroy_Time); 
             spriteRenderer.color = hasColorPackage;
+            Destroy(other.gameObject, Destroy_Time); 
+            
         }
 
         if (other.tag == "Loc" && hasPackage)   
